@@ -13,13 +13,7 @@ public class Worker implements Runnable {
 		// TODO Auto-generated method stub
 		while(taskQueue.isEmpty()==false) {
 			taskQueue.remove();
-			perform();
-		}
+				perform();
 	}
-	private void perform() {
-		// TODO Auto-generated method stub
-		
 	}
-
-
 }
