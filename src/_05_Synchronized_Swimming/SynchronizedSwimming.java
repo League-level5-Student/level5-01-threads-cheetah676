@@ -15,7 +15,6 @@ package _05_Synchronized_Swimming;
  */
 public class SynchronizedSwimming {
 	private static final Object swimmingPool = new Object();
-
 	public static void main(String[] args) {
 		Swimmer a = new Swimmer("John");
 		Swimmer b = new Swimmer("Sally");
@@ -27,7 +26,7 @@ public class SynchronizedSwimming {
 	 * Refactor this method using a synchronized block to ensure a lock must be held on
 	 * the swimmingPool object until the swimmer has finished their lap.
 	 */
-	private static void swimLap(Swimmer swimmer) throws InterruptedException {
+	private static synchronized void swimLap(Swimmer swimmer) throws InterruptedException {
 		System.out.println(swimmer.name + " started a lap!");
 		Thread.sleep(2000);
 		System.out.println(swimmer.name + " finished!");
